@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: xrxffink3-go 
+  janus-idp.io/tekton: xrxffink3-go
+  backstage.io/kubernetes-id: xrxffink3-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: xrxffink3-go
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
